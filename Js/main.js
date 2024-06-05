@@ -31,7 +31,7 @@ function headerShadow(){
     }
 }
 
-/* ---- TYPING EFFECT ---- */
+/* ---- TYPING EFFECT ---- 
 
 var typinfeffect = new Typed(".typedText",{
     strings : ["Front-end","Back-end"],
@@ -40,6 +40,8 @@ var typinfeffect = new Typed(".typedText",{
     backSpeed : 80,
     backDelay : 2000
 })
+
+*/
 
 /* ---- ## -- SCROLL REVEAL ANIMATION --## ---- */
 
@@ -57,41 +59,53 @@ sr.reveal('.featured-name',{delay: 100})
 sr.reveal('.featured-text-info',{delay: 200})
 sr.reveal('.featured-text-btn',{delay: 200})
 sr.reveal('.social_icons',{delay: 200})
+sr.reveal('.text--info',{delay: 200})
 sr.reveal('.featured-image',{delay: 300})
+
+
+/* -- ABOUT INFO & CONTACT INFO -- */
+
+const srLeft = ScrollReveal({
+  origin: 'left',
+  distance: '80px',
+  duration: 2000,
+  reset: true
+})
+
+const srRight = ScrollReveal({
+  origin: 'rigth',
+  distance: '80px',
+  duration: 2000,
+  reset: true
+})
+
+srLeft.reveal('.about-info',{delay: 100})
+srLeft.reveal('.contact-info',{delay: 100})
+
+
+/* -- VOLUNTARIOS -- */
+
+srRight.reveal('.section__title',{delay: 100})
+srLeft.reveal('.new__description',{delay: 100})
+sr.reveal('.new__card',{interval: 200})
+
 
 /* -- PROJECT BOX -- */
 
-sr.reveal('.project-box',{interval: 200})
+sr.reveal('.project__card',{interval: 200})
 
 /* -- HEADINGS -- */
 
 sr.reveal('.top-header',{})
 
+/* -- ONGS -- */
+
+srLeft.reveal('.section__title',{delay: 100})
+srLeft.reveal('.ong__description',{delay: 100})
+
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
-/* -- ABOUT INFO & CONTACT INFO -- */
 
-  const srLeft = ScrollReveal({
-    origin: 'left',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-  })
-  
-  srLeft.reveal('.about-info',{delay: 100})
-  srLeft.reveal('.contact-info',{delay: 100})
-
-/* -- ABOUT SKILLS & FORM BOX -- */
-
-  const srRight = ScrollReveal({
-    origin: 'right',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-  })
-  
-  srRight.reveal('.skills-box',{delay: 100})
-  srRight.reveal('.form-control',{delay: 100})
 
 /* ----- CHANGE ACTIVE LINK ----- */
 
@@ -103,9 +117,9 @@ sr.reveal('.top-header',{})
           sectionTop = current.offsetTop - 50,
         sectionId = current.getAttribute('id')
       if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) { 
-          document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+          document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
       }  else {
-        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
       }
     })
   }

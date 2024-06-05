@@ -111,10 +111,8 @@ body
 {
     background: var(--body-color);
     background-image: url(/image/fundo.png);
-    background-repeat:  no-repeat;
-    background-size: 100%;
-    background-position: fixed;
     
+    background-repeat: inherit;
     
 }
 
@@ -281,13 +279,13 @@ nav
     gap: 20px;
 }
 
-.featured-text-btn>.blue-btn
+.featured-text-btn>.sop .blue-btn
 {
     background: var(--first-color);
     color: var(--color-white);
 }
 
-.featured-text-btn>.blue-btn:hover
+.featured-text-btn>.sop .blue-btn:hover
 {
     background: var(--first-color-hover);
 }
@@ -494,7 +492,8 @@ h3
 .new__data
 {
     text-align: left;
-    margin-top: 10%;    
+    justify-content: center;
+    align-items: center;    
 }
 
 .new__data h2
@@ -795,13 +794,13 @@ h3
     margin-bottom: 0;
 }
 
-.timeline-item:nth-last-child(odd)
+.timeline-item:nth-child(odd)
 {
     padding-right: calc(50% + 30px);
     text-align: right;
 }
 
-.timeline-item:nth-last-child(even)
+.timeline-item:nth-child(even)
 {
     padding-left: calc(50% + 30px);
 }
@@ -813,6 +812,7 @@ h3
     background-color: var(--first-color);
     box-shadow: 0 0 25px var(--first-color),
                 0 0 50px var(--first-color);
+    position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
     top: 10px;
@@ -826,10 +826,12 @@ h3
     margin: 6px 0 15px;
 }
 
-.timeline-content
+.timeline-content h3
 {
-    background-color: var(--first-color);
+    color: var(--first-color);
 }
+
+
 /*================= BREAKPOINTES ====================*/
 
 /*For small devices*/
